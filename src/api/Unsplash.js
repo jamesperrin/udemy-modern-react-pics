@@ -1,8 +1,9 @@
 import axios from "axios";
+import config from "../config/config";
 
 export default axios.create({
-  baseURL: "https://api.unsplash.com",
+  baseURL: `${config.ApiUrl}`,
   headers: {
-    Authorization: "Client-ID jwwfeW0mbqFEVb1SIWHbQRYMhAgcb0YL4pTqkWdG-Tk",
+    Authorization: `${config.ApiKeyName} ${config.ApiKeyValue}`,
   },
 });
